@@ -9,8 +9,6 @@ rm -rf heroku heroku.tar.gz
 ln -s /data/data/com.termux/files/usr/lib/heroku/bin/heroku /data/data/com.termux/files/usr/bin/heroku
 cd /data/data/com.termux/files/usr/lib/heroku/bin/
 sed -i 's/#!/#!\/data\/data\/com.termux\/files/g' heroku
-pkg install nodejs -y
-mv node node.old
 ln -s ../../../bin/node node
 echo 'export PATH="/data/data/com.termux/files/usr/lib/heroku/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
